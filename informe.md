@@ -145,7 +145,7 @@ Ambos contenedores, frontend y backend, se ejecutaron correctamente. La red pers
 El frontend de la aplicación React fue accesible en `http://localhost`, y el backend simulado en `http://localhost:3100`. Ambos servicios interactuaron correctamente, como se esperaba.
 
 <p align="center">
-  <img src="./assets/results.png" alt="Resultados" width="800">
+  <img src="./assets/results.png" alt="Resultado" width="800">
 </p>
 
 ## 10. Conclusiones
