@@ -95,9 +95,7 @@ CMD ["npm", "start"]
 
 Ahora, vamos a crear una red Docker para que los contenedores puedan comunicarse entre sí:
 
-```bash
-docker network create app_network
-```
+
 
 <p align="center">
   <img src="./assets/docker_network.png" alt="Red Docker" width="800">
@@ -107,10 +105,6 @@ docker network create app_network
 
 Usando los Dockerfiles, vamos a construir las imágenes para el frontend y el backend. En cada uno de los directorios, ejecutamos:
 
-```bash
-docker build -t frontend-app .
-docker build -t backend-app .
-```
 
 <p align="center">
   <img src="./assets/docker_build.png" alt="Docker Build" width="800">
@@ -118,11 +112,10 @@ docker build -t backend-app .
 
 ### Paso 5: Ejecutar los contenedores
 
-Ahora que las imágenes están listas, vamos a ejecutar los contenedores y conectarlos a la red personalizada:
+Ejecutamos el archivo compose:
 
 ```bash
-docker run -d --name frontend --network app_network -p 80:80 frontend-app
-docker run -d --name backend --network app_network -p 3100:3100 backend-app
+docker-compose up --build
 ```
 
 <p align="center">
@@ -135,7 +128,13 @@ docker run -d --name backend --network app_network -p 3100:3100 backend-app
 2. Para verificar el backend, accedemos a `http://localhost:3100` desde el navegador o mediante herramientas como Postman.
 
 <p align="center">
-  <img src="./assets/verify.png" alt="Verificación Frontend y Backend" width="800">
+  <img src="./assets/verify.png" alt="Verificación Frontend " width="800">
+</p>
+<p align="center">
+  <img src="./assets/verify2.png" alt="Verificación Frontend " width="800">
+</p>
+<p align="center">
+  <img src="./assets/verify3.png" alt="Verificación Frontend " width="800">
 </p>
 
 ## 9. Resultados
